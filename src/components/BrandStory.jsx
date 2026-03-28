@@ -7,7 +7,7 @@ const BrandStory = () => {
       <div className="container brand-story-container">
         <div className="brand-story-image-wrapper">
           <img 
-            src="/images/brand_story_lifestyle.png" 
+            src={`${import.meta.env.BASE_URL}images/brand_story_lifestyle.png`} 
             alt="CazyGreen editorial lifestyle featuring modern indoor plants" 
             className="brand-story-image"
           />

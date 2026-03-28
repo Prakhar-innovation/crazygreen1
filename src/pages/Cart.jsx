@@ -44,7 +44,7 @@ const Cart = () => {
             {cartItems.map((item) => (
               <div key={item.id} className="cart-item">
                 <div className="cart-item-image">
-                  <img src={item.image} alt={item.name} />
+                  <img src={item.image.startsWith('/') ? import.meta.env.BASE_URL + item.image.slice(1) : item.image} alt={item.name} />
                 </div>
                 <div className="cart-item-details">
                   <Link to={`/shop/${item.id}`} className="cart-item-name">{item.name}</Link>

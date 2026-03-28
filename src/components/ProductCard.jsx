@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 import './ProductCard.css';
 
 const ProductCard = ({ id, name, price, image, tag, onAddToCart, onBuyNow }) => {
+  const imagePath = image.startsWith('/') ? import.meta.env.BASE_URL + image.slice(1) : image;
+
   return (
     <div className="product-card">
       <Link to={`/shop/${id}`} className="image-link">
         <div className="product-image-container">
           {tag && <span className="product-badge">{tag}</span>}
-          <img src={image} alt={name} className="product-image" loading="lazy" />
+          <img src={imagePath} alt={name} className="product-image" loading="lazy" />
         </div>
       </Link>
       <div className="product-info">

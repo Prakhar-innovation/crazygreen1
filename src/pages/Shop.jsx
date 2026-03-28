@@ -5,7 +5,7 @@ import ProductCard from '../components/ProductCard';
 import { useCart } from '../context/CartContext';
 import './Shop.css';
 
-const API_ENDPOINT = '/api/products.json';
+const API_ENDPOINT = import.meta.env.BASE_URL + 'api/products.json';
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -65,7 +65,7 @@ const Shop = () => {
       {/* Premium Header */}
       <header className="shop-header">
         <div className="shop-header-bg">
-          <img src="/images/shop_header_bg.png" alt="Shop background" />
+          <img src={`${import.meta.env.BASE_URL}images/shop_header_bg.png`} alt="Shop background" />
         </div>
         <div className="shop-header-content">
           <h1 className="fade-in-up">The Collection</h1>

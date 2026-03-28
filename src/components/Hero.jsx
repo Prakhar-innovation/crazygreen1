@@ -25,7 +25,7 @@ const Hero = () => {
         <div className="hero-image-wrapper">
           <div className="hero-image-container">
             <img 
-              src="/images/hero_plant.png" 
+              src={`${import.meta.env.BASE_URL}images/hero_plant.png`} 
               alt="Huge beautiful monstera plant in a modern living space" 
               className="hero-image"
             />

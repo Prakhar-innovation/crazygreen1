@@ -18,7 +18,7 @@ const Story = () => {
       <section className="story-split container section">
         <div className="story-split-image">
           <img 
-            src="/images/story_brand_image.jpg" 
+            src={`${import.meta.env.BASE_URL}images/story_brand_image.jpg`} 
             onError={(e) => e.target.src = "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?w=800&auto=format&fit=crop"} 
             alt="Beautiful premium indoor plants" 
           />
@@ -94,7 +94,7 @@ const Story = () => {
       {/* Lifestyle Full-Width Image Section */}
       <section className="story-lifestyle">
         <img 
-          src="/images/story_lifestyle.jpg" 
+          src={`${import.meta.env.BASE_URL}images/story_lifestyle.jpg`} 
           onError={(e) => e.target.src = "https://images.unsplash.com/photo-1545241047-6083a36ee2c8?w=1600&auto=format&fit=crop"} 
           alt="Premium lifestyle interior with plants" 
           className="lifestyle-img"

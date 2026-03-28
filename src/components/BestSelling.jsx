@@ -4,7 +4,7 @@ import './BestSelling.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 
-const API_ENDPOINT = '/api/products.json';
+const API_ENDPOINT = import.meta.env.BASE_URL + 'api/products.json';
 
 const BestSelling = () => {
   const [products, setProducts] = useState([]);

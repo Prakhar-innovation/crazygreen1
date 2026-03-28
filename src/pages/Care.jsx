@@ -30,7 +30,7 @@ const Care = () => {
           </div>
           <div className="care-image-block">
             <img 
-              src="/images/care_watering.jpg" 
+              src={`${import.meta.env.BASE_URL}images/care_watering.jpg`} 
               onError={(e) => e.target.src = "https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=800&auto=format&fit=crop"} 
               alt="Watering a premium indoor plant" 
             />
@@ -52,7 +52,7 @@ const Care = () => {
           </div>
           <div className="care-image-block">
             <img 
-              src="/images/care_sunlight.jpg" 
+              src={`${import.meta.env.BASE_URL}images/care_sunlight.jpg`} 
               onError={(e) => e.target.src = "https://images.unsplash.com/photo-1604762524889-3e2fcc145683?w=800&auto=format&fit=crop"} 
               alt="Sunlight hitting indoor plants" 
             />
