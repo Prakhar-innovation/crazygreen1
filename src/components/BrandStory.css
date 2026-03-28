@@ -1,0 +1,102 @@
+.brand-story {
+  background-color: var(--color-surface);
+  overflow: hidden;
+}
+
+.brand-story-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* Slightly larger image side */
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.brand-story-image-wrapper {
+  position: relative;
+  border-radius: var(--radius-sm); /* Sharper, more editorial edges */
+  overflow: hidden;
+  aspect-ratio: 1/1.2; /* Taller editorial aspect ratio */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  background-color: var(--color-background);
+}
+
+.brand-story-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brand-story-image-wrapper:hover .brand-story-image {
+  transform: scale(1.03);
+}
+
+.brand-story-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  max-width: 480px;
+  padding-left: var(--space-md);
+}
+
+.brand-story-title {
+  color: var(--color-text-main);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 400; /* Lighter weight for premium feel */
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.brand-story-text {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.story-btn {
+  margin-top: 1rem;
+  align-self: flex-start;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .brand-story-container {
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 768px) { /* Changed from 992px to 768px to keep 2-col longer */
+  .brand-story-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .brand-story-image-wrapper {
+    order: 2;
+    aspect-ratio: 16/9;
+    min-height: 300px; /* Ensure image wrapper has height if image fails */
+  }
+
+  .brand-story-content {
+    order: 1;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-left: 0; /* Remove padding on mobile */
+  }
+  
+  .story-btn {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) { /* Changed from 640px to 480px */
+  .brand-story-image-wrapper {
+    aspect-ratio: 4/5;
+  }
+  
+  .brand-story-text {
+    font-size: 1.1rem;
+  }
+}

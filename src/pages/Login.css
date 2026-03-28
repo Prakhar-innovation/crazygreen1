@@ -1,0 +1,306 @@
+/* ==========================================================================
+   Login Page — Premium Glassmorphism + Floating Orbs
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+/* ----------  Page wrapper  ---------- */
+.login-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* Rich, multi-stop botanical gradient */
+  background:
+    radial-gradient(ellipse at 20% 40%,  rgba(47, 93, 80, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 70%,  rgba(220, 233, 226, 0.5) 0%, transparent 55%),
+    linear-gradient(155deg, #f4f7f4 0%, #e8f0ec 45%, #dce9e2 100%);
+  font-family: 'Outfit', sans-serif;
+}
+
+/* ----------  Floating botanical orbs  ---------- */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(0);
+  animation: orbFloat ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Orb colours: different tints of the green palette */
+.orb-1 {
+  width: 380px; height: 380px;
+  top: -100px; left: -80px;
+  background: radial-gradient(circle, rgba(47, 93, 80, 0.25) 0%, rgba(220, 233, 226, 0.0) 70%);
+  filter: blur(60px);
+  animation-duration: 14s;
+}
+.orb-2 {
+  width: 260px; height: 260px;
+  bottom: -60px; right: 5%;
+  background: radial-gradient(circle, rgba(47, 93, 80, 0.18) 0%, rgba(220, 233, 226, 0.0) 70%);
+  filter: blur(50px);
+  animation-duration: 10s;
+  animation-delay: -3s;
+}
+.orb-3 {
+  width: 180px; height: 180px;
+  top: 15%; right: 8%;
+  background: radial-gradient(circle, rgba(100, 170, 140, 0.30) 0%, transparent 70%);
+  filter: blur(35px);
+  animation-duration: 18s;
+  animation-delay: -6s;
+}
+.orb-4 {
+  width: 130px; height: 130px;
+  bottom: 20%; left: 10%;
+  background: radial-gradient(circle, rgba(220, 233, 226, 0.7) 0%, transparent 70%);
+  filter: blur(25px);
+  animation-duration: 8s;
+  animation-delay: -1s;
+}
+.orb-5 {
+  width: 220px; height: 220px;
+  top: 55%; left: 65%;
+  background: radial-gradient(circle, rgba(47, 93, 80, 0.12) 0%, transparent 70%);
+  filter: blur(45px);
+  animation-duration: 22s;
+  animation-delay: -9s;
+}
+
+@keyframes orbFloat {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(20px, 20px) scale(1.06); }
+}
+
+/* ----------  Floating glass card  ---------- */
+.login-card {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 440px;
+  margin: 2rem;
+
+  /* Glassmorphism */
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 28px;
+  padding: 3rem 2.8rem;
+
+  /* Layered shadow for real depth */
+  box-shadow:
+    0 4px 6px  rgba(47, 93, 80, 0.04),
+    0 12px 25px rgba(47, 93, 80, 0.08),
+    0 30px 60px rgba(47, 93, 80, 0.10),
+    inset 0 1px 0  rgba(255, 255, 255, 0.90),
+    inset 0 -1px 0 rgba(47, 93, 80, 0.04);
+
+  /* Initial 3-D tilt */
+  transform: perspective(1200px) rotateX(4deg) rotateY(-4deg) translateZ(10px);
+  transform-style: preserve-3d;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Entrance animation */
+  animation: cardRise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes cardRise {
+  from {
+    opacity: 0;
+    transform: perspective(1200px) rotateX(18deg) rotateY(-12deg) translateY(60px) translateZ(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(1200px) rotateX(4deg) rotateY(-4deg) translateZ(10px);
+  }
+}
+
+/* Shimmer highlight on top-left edge */
+.login-card::before {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: 28px;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.55) 0%,
+    rgba(255,255,255,0.0) 50%
+  );
+  z-index: 1;
+}
+
+/* ----------  Logo  ---------- */
+.login-logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2f5d50;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  transform: translateZ(30px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.login-logo-link:hover { transform: translateZ(40px) scale(1.03); }
+
+.logo-text {
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #2f5d50;
+}
+
+/* ----------  Header  ---------- */
+.login-header {
+  margin-bottom: 2rem;
+  transform: translateZ(20px);
+}
+.login-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1c1c1c;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+.login-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+/* ----------  Form  ---------- */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  transform: translateZ(20px);
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1c1c1c;
+}
+.forgot-link {
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.forgot-link:hover { color: #2f5d50; }
+
+/* Input with icon wrapper */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  color: #9ca3af;
+  pointer-events: none;
+  transition: color 0.25s ease;
+}
+.input-wrapper:focus-within .input-icon { color: #2f5d50; }
+
+.form-control {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1.5px solid rgba(220, 233, 226, 0.9);
+  border-radius: 14px;
+  padding: 1rem 1.25rem 1rem 3rem; /* left padding for icon */
+  font-size: 1rem;
+  font-family: 'Outfit', sans-serif;
+  color: #1c1c1c;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-control::placeholder { color: #9ca3af; }
+.form-control:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.90);
+  border-color: #2f5d50;
+  box-shadow: 0 0 0 4px rgba(47, 93, 80, 0.12);
+}
+
+/* ----------  Sign In button  ---------- */
+.login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 1.1rem 2rem;
+  background: #2f5d50;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow:
+    0 4px 12px rgba(47, 93, 80, 0.25),
+    0 10px 25px rgba(47, 93, 80, 0.18);
+  transform: translateZ(35px);
+  transition:
+    background 0.3s ease,
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s ease;
+}
+.login-btn:hover {
+  background: #3a7263;
+  transform: translateZ(45px) translateY(-3px);
+  box-shadow:
+    0 6px 18px rgba(47, 93, 80, 0.30),
+    0 16px 35px rgba(47, 93, 80, 0.22);
+}
+.login-btn:active {
+  transform: translateZ(38px) translateY(-1px);
+}
+
+/* ----------  Footer  ---------- */
+.login-footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #6b7280;
+  transform: translateZ(20px);
+}
+.login-footer a {
+  color: #2f5d50;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.login-footer a:hover { color: #3a7263; text-decoration: underline; }
+
+/* ----------  Mobile  ---------- */
+@media (max-width: 480px) {
+  .login-card {
+    margin: 1rem;
+    padding: 2.4rem 1.6rem;
+    border-radius: 20px;
+    transform: none !important;  /* disable tilt on touch screens */
+  }
+  .login-title { font-size: 1.75rem; }
+  .orb { display: none; } /* cleaner on small screens */
+}

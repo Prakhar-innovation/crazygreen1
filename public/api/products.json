@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "name": "Monstera Deliciosa",
+    "price": "$45.00",
+    "tag": "Best Seller",
+    "image": "/images/product_monstera_deliciosa.png",
+    "category": "Large Statements",
+    "description": "The Swiss Cheese Plant is famous for its natural leaf-holes. A stunning statement piece for any room."
+  },
+  {
+    "id": 2,
+    "name": "Fiddle Leaf Fig",
+    "price": "$65.00",
+    "tag": "Best Seller",
+    "image": "/images/product_fiddle_leaf_fig.png",
+    "category": "Large Statements",
+    "description": "Features very large, heavily veined, violin-shaped leaves. Needs bright, indirect light to thrive."
+  },
+  {
+    "id": 3,
+    "name": "Snake Plant Laurentii",
+    "price": "$35.00",
+    "tag": "Air Purifying",
+    "image": "/images/product_snake_plant.png",
+    "category": "Air Purifying",
+    "description": "One of the most tolerant plants out there, perfect for beginners. Known for its air-purifying qualities."
+  },
+  {
+    "id": 4,
+    "name": "Golden Pothos",
+    "price": "$25.00",
+    "tag": "Low Maintenance",
+    "image": "/images/product_pothos.png",
+    "category": "Air Purifying",
+    "description": "A trailing vine that's eager to grow. Perfect for high shelves or hanging baskets."
+  },
+  {
+    "id": 5,
+    "name": "ZZ Plant",
+    "price": "$38.00",
+    "tag": "Pet Friendly",
+    "image": "/images/hero_plant.png",
+    "category": "Low Light",
+    "description": "Characterized by its dark, shiny, waxy green leaves. Extremely drought tolerant."
+  },
+  {
+    "id": 6,
+    "name": "Calathea Orbifolia",
+    "price": "$48.00",
+    "tag": "Best Seller",
+    "image": "/images/product_monstera_deliciosa.png",
+    "category": "Pet Friendly",
+    "description": "Known for its oversized leaves with striking silver stripes. Requires high humidity to thrive."
+  },
+  {
+    "id": 7,
+    "name": "Bird of Paradise",
+    "price": "$75.00",
+    "tag": "New",
+    "image": "/images/brand_story_lifestyle.png",
+    "category": "Large Statements",
+    "description": "Bring tropical flair indoors with these broad, banana-like leaves. Thrives in bright sunlight."
+  },
+  {
+    "id": 8,
+    "name": "Peace Lily",
+    "price": "$32.00",
+    "tag": "Air Purifying",
+    "image": "/images/story_care.png",
+    "category": "Low Light",
+    "description": "An elegant plant with white, hood-like flowers. Great at breaking down toxic indoor gases."
+  },
+  {
+    "id": 9,
+    "name": "Soft Leaf Philodendron",
+    "price": "$45.00",
+    "tag": "Best Seller",
+    "image": "/images/product_fiddle_leaf_fig.png",
+    "category": "Large Statements",
+    "description": "Known for its large, heart-shaped leaves that bring a velvety texture to any indoor space."
+  },
+  {
+    "id": 10,
+    "name": "Rubber Tree",
+    "price": "$40.00",
+    "tag": "Low Light",
+    "image": "/images/product_snake_plant.png",
+    "category": "Air Purifying",
+    "description": "Sturdy and dramatic with glossy, burgundy-green leaves. Can grow very tall indoors."
+  },
+  {
+    "id": 11,
+    "name": "Aloe Vera",
+    "price": "$22.00",
+    "tag": "Medicinal",
+    "image": "/images/product_pothos.png",
+    "category": "Low Maintenance",
+    "description": "A charming succulent with thick, fleshy leaves. Known for its soothing gel."
+  },
+  {
+    "id": 12,
+    "name": "Spider Plant",
+    "price": "$28.00",
+    "tag": "Pet Friendly",
+    "image": "/images/product_monstera_deliciosa.png",
+    "category": "Air Purifying",
+    "description": "A fast-growing plant that looks great in hanging baskets. Very adaptable and easy to care for."
+  },
+  {
+    "id": 13,
+    "name": "Jade Plant",
+    "price": "$30.00",
+    "tag": "Low Maintenance",
+    "image": "/images/hero_plant.png",
+    "category": "Pet Friendly",
+    "description": "A beautiful succulent with tree-like branches. Symbolizes good luck and prosperity."
+  },
+  {
+    "id": 14,
+    "name": "Pilea Peperomioides",
+    "price": "$35.00",
+    "tag": "Best Seller",
+    "image": "/images/product_fiddle_leaf_fig.png",
+    "category": "Low Maintenance",
+    "description": "Also known as the Chinese Money Plant. Famous for its round, coin-shaped leaves."
+  },
+  {
+    "id": 15,
+    "name": "Majesty Palm",
+    "price": "$85.00",
+    "tag": "Large Space",
+    "image": "/images/brand_story_lifestyle.png",
+    "category": "Large Statements",
+    "description": "A classic indoor palm tree that adds a lush, tropical feel to any bright room."
+  },
+  {
+    "id": 16,
+    "name": "Cast Iron Plant",
+    "price": "$42.00",
+    "tag": "Indestructible",
+    "image": "/images/product_snake_plant.png",
+    "category": "Low Light",
+    "description": "Incredibly resilient and able to survive in very low light. Perfect for dark corners."
+  },
+  {
+    "id": 17,
+    "name": "English Ivy",
+    "price": "$24.00",
+    "tag": "Trailing",
+    "image": "/images/product_pothos.png",
+    "category": "Air Purifying",
+    "description": "A beautiful trailing plant that can cascade down shelves or be trained to climb."
+  },
+  {
+    "id": 18,
+    "name": "Parlor Palm",
+    "price": "$38.00",
+    "tag": "Pet Friendly",
+    "image": "/images/story_care.png",
+    "category": "Low Light",
+    "description": "A popular indoor palm that easily adapts to lower light and adds a vintage elegance."
+  }
+]
